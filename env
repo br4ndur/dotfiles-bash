@@ -1,0 +1,10 @@
+# sh command:
+EDITOR=emacsclient export EDITOR
+
+# history remove duplicates
+HISTCONTROL=erasedups
+
+# history setsize
+HISTSIZE=9999
+
+export TERM=xterm-256color

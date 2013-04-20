@@ -5,6 +5,8 @@ EDITOR=emacsclient export EDITOR
 HISTCONTROL=erasedups
 
 # history setsize
-HISTSIZE=9999
+HISTFILESIZE=10000
+#HISTSIZE=10000
 
 export TERM=xterm-256color
+export BROWSER=firefox

@@ -40,4 +40,12 @@ BWHITE='\e[47m'
 
 # Update the command prompt to be <user>:<current_directory>(git_branch) >
 # Note that the git branch is given a special color
-PS1="\[$EBLACK\]\u:\w\[$NO_COLOR\]>"
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[$EGREEN\]\u:\w\[$NO_COLOR\]>"
+    ;;
+*)
+    ;;
+esac
